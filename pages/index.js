@@ -249,6 +249,8 @@ export default class MainPage extends Component {
         </div>
         <div className="row">
           <table>
+
+            <tbody>
             <tr>
               <th colSpan={4}>Camera Options</th>
               <th colSpan={1}>Total (USD)</th>
@@ -256,11 +258,11 @@ export default class MainPage extends Component {
             <tr>
               <td colSpan={4} rowSpan={4}>
                 <ul> 
-                  <li>{this.state.camera_qty} camera units</li>
-                  {this.state.option_1 ? <li>Extra Battery [+{options.COST_BATTERY} USD]</li> : null }
-                  {this.state.option_2 ? <li>Extra Memory [+{options.COST_MEMORY} USD]</li> : null }
-                  {this.state.option_3 ? <li>3G [+{options.COST_3G} USD]</li> : null }
-                  {this.state.option_4 ? <li>GPS [+{options.COST_GPS} USD]</li> : null }
+                  <li key={'units'}>{this.state.camera_qty} camera units</li>
+                  {this.state.option_1 ? <li key={'options1'}>Extra Battery [+{options.COST_BATTERY} USD]</li> : null }
+                  {this.state.option_2 ? <li key={'options2'}>Extra Memory [+{options.COST_MEMORY} USD]</li> : null }
+                  {this.state.option_3 ? <li key={'options3'}>3G [+{options.COST_3G} USD]</li> : null }
+                  {this.state.option_4 ? <li key={'options4'}>GPS [+{options.COST_GPS} USD]</li> : null }
                   {this.state.docking == 2 ? 
                     <li key='dock1'>{this.state.camera_qty / 8} x Docking Station DMT8 [+{DOCKING_STATIONS[2]}USD/Unit ]</li> : null }
                   {this.state.docking == 1 ? 
@@ -280,6 +282,7 @@ export default class MainPage extends Component {
 
               } USD</td>
             </tr>
+            </tbody>
           </table>
         </div>
 
@@ -289,6 +292,7 @@ export default class MainPage extends Component {
         </div>
         <div className="row">
           <table>
+            <tbody>
             <tr>
               <th colSpan={4}>Cloud Storage Options</th>
               <th colSpan={1}>Total (USD)</th>
@@ -311,6 +315,7 @@ export default class MainPage extends Component {
                 
               </td>
             </tr>
+            </tbody>
           </table>
         </div>
       </div>
