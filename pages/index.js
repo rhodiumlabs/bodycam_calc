@@ -23,6 +23,7 @@ const DOCKING_STATIONS = {
   2: 1500
 }
 const PER_GIGABIT_COST = 0.006;
+const STORAGE_MULTIPLIER = 10;
 export const bodyStyle = style({
     fontFamily: 'Work Sans',
     color: '#333',
@@ -309,7 +310,7 @@ export default class MainPage extends Component {
               <td colSpan={1} key='cost2'>
                 <ul> 
                   <li>Software Cost: $2,500 USD </li>
-                  <li>Monthly Storage Cost: {formatter.format(this.state.daily_hours * this.state.camera_qty * 8 * this.state.retaining_period * 31 * PER_GIGABIT_COST * 1.4)} USD/MONTH</li>
+                  <li>Monthly Storage Cost: {formatter.format(this.state.daily_hours * this.state.camera_qty * 8 * this.state.retaining_period * 31 * PER_GIGABIT_COST * STORAGE_MULTIPLIER)} USD/MONTH</li>
                   
                 </ul>
                 
