@@ -310,7 +310,7 @@ export default class MainPage extends Component {
               <td colSpan={1} key='cost2'>
                 <ul> 
                   <li>Software Cost: $2,500 USD </li>
-                  <li>Monthly Storage Cost: {formatter.format(this.state.daily_hours * this.state.camera_qty * 8 * this.state.retaining_period * 31 * PER_GIGABIT_COST * STORAGE_MULTIPLIER)} USD/MONTH</li>
+                  <li>Monthly Storage Cost: {formatter.format(this.state.daily_hours * 8 * this.state.retaining_period * 31 * PER_GIGABIT_COST * STORAGE_MULTIPLIER)} USD/MONTH/CAMERA</li>
                   
                 </ul>
                 
