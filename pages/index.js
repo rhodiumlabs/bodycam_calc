@@ -228,8 +228,8 @@ export default class MainPage extends Component {
                 <RadioOptions
                     options={[
                         {text:"Short Period (1-4 weeks) ", value: 1}, 
-                        {text:"Medium Period (6-12 months)", value: 3},
-                        {text:"Long Period (2 years)", value: 8}
+                        {text:"Medium Period (6-12 months)", value: 12},
+                        {text:"Long Period (2 years)", value: 24}
                     ]}
                     customTitle="Custom Period"
                     customUnits="months"
