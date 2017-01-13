@@ -243,7 +243,7 @@ export default class MainPage extends Component {
     let totalRequiredStorage = (this.state.dailyHours * this.state.cameraQuantity * GIGABIT_PER_HOUR * this.state.retainingPeriod * 30);
     let yearlyMaintenanceFees = (totalRequiredStorage * PER_GIGABIT_COST * STORAGE_MULTIPLIER * 12);
     let yearlyMaintenanceFeesPerCam = this.state.cameraQuantity == 0 ? 0 : (yearlyMaintenanceFees / this.state.cameraQuantity);
-
+    let recurringCosts = YEARLY_SERVICE_COST(this.state.cameraQuantity) + yearlyMaintenanceFees;
     return <Container>
       <div className={`${bodyStyle} container`}>
         <div className="row">
@@ -371,8 +371,8 @@ export default class MainPage extends Component {
 	    <dl>
 	      <dt>Total Cost</dt>
 
-	      <dd>Fixed Costs <span className={priceStyle}>{formatter.format(YEARLY_SERVICE_COST(this.state.cameraQuantity))}</span></dd>
-              <dd>Recurring Costs <span className={priceStyle}>{formatter.format(YEARLY_SERVICE_COST(this.state.cameraQuantity))}/Year</span></dd>
+	      <dd>Fixed Costs <span className={priceStyle}>{formatter.format(totalHardwareCost)}</span></dd>
+              <dd>Recurring Costs <span className={priceStyle}>{formatter.format(recurringCosts)}/Year</span></dd>
 	    </dl>
             <hr/>
             <small>These prices are subject to change based on further specified requirements</small>
