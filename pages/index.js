@@ -263,7 +263,7 @@ export default class MainPage extends Component {
               </div>
               <div className="row">
                 <div className="column">
-                <h5 className={subHeader}> Choose your camera </h5>
+                <h5 className={subHeader}> 1. Choose your camera </h5>
                 </div>
               </div>
               <div className="row">
@@ -278,7 +278,7 @@ export default class MainPage extends Component {
               <div>
 
               <RadioOptions
-                title='Number of cameras'
+                title='2. Number of cameras'
                 options={[
                     {text:"Pilot (100 Units)", value: 100}, 
                     {text:"Mid-Level (500 Units)", value: 500}, 
@@ -288,7 +288,7 @@ export default class MainPage extends Component {
                 onChange={(cameraQuantity) => this.setState({cameraQuantity})}
               />
                 <div className="row">
-                  <div className="column"><h5 className={subHeader}> Optional Features </h5></div>
+                  <div className="column"><h5 className={subHeader}> 3. Optional Features </h5></div>
                 </div>
                 <div className="row">
                 <div className="column">
@@ -314,7 +314,7 @@ export default class MainPage extends Component {
                 </div>
               
               <RadioOptions
-                title='How frequent are the police officers going to use the cameras'
+                title='4. How frequent are the police officers going to use the cameras'
                 options={[
                     {text:"Minimal-use (0.5-1h/day)", value: 1}, 
                     {text:"Moderate-use (1-3h/day)", value: 3},
@@ -324,7 +324,7 @@ export default class MainPage extends Component {
                 onChange={(dailyHours) => this.setState({dailyHours})}
               />
               <RadioOptions
-                  title={'How long should the data to be kept (cloud-storage)'}
+                  title={'5. How long should the data to be kept (cloud-storage)'}
                   options={[
                       {text:"Short Period (1 month) ", value: 1}, 
                       {text:"Medium Period (6 months)", value: 12},
@@ -334,7 +334,7 @@ export default class MainPage extends Component {
                   onChange={(retainingPeriod) => this.setState({retainingPeriod})}
                 />
               <RadioOptions
-                title={'Do you require local support and training?'}
+                title={'6. Do you require local support and training?'}
                 options={[
                     {text:"Yes", value: 1}, 
                     {text:"No", value: 0}
