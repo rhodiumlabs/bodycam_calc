@@ -367,6 +367,13 @@ export default class MainPage extends Component {
               
               <dd>Training/Support <span className={priceStyle}>{formatter.format(YEARLY_SERVICE_COST(this.state.cameraQuantity))}/Year</span></dd>
             </dl> : null }
+
+	    <dl>
+	      <dt>Total Cost</dt>
+
+	      <dd>Fixed Costs <span className={priceStyle}>{formatter.format(YEARLY_SERVICE_COST(this.state.cameraQuantity))}</span></dd>
+              <dd>Recurring Costs <span className={priceStyle}>{formatter.format(YEARLY_SERVICE_COST(this.state.cameraQuantity))}/Year</span></dd>
+	    </dl>
             <hr/>
             <small>These prices are subject to change based on further specified requirements</small>
             </div>
