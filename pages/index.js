@@ -244,7 +244,7 @@ export default class MainPage extends Component {
     let totalRequiredStorage = (this.state.dailyHours * this.state.cameraQuantity * GIGABIT_PER_HOUR * this.state.retainingPeriod * 30);
     let yearlyMaintenanceFees = (totalRequiredStorage * PER_GIGABIT_COST * STORAGE_MULTIPLIER * 12);
     let yearlyMaintenanceFeesPerCam = this.state.cameraQuantity == 0 ? 0 : (yearlyMaintenanceFees / this.state.cameraQuantity);
-    let recurringCosts = YEARLY_SERVICE_COST(this.state.cameraQuantity) + (this.state.localSupport == 1 ? yearlyMaintenanceFees : 0);
+    let recurringCosts = (this.state.localSupport == 1 ? YEARLY_SERVICE_COST(this.state.cameraQuantity) : 0) +  yearlyMaintenanceFees;
     return <Container>
       <div className={`${bodyStyle} container`}>
         <div className="row">
