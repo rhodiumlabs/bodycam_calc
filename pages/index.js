@@ -226,12 +226,13 @@ export default class MainPage extends Component {
       let cost = 0;
       if(this.state.camera == STING_RAY) {
         cost += CAMERA_STING_RAY_COST;
+	_.each(this.state.additionalFeatures, ((val, ft) => { val ? cost += costMap[ft] : null}));      
       }
 
       if(this.state.camera == MANTA_RAY) {
         cost += CAMERA_MANTA_RAY_COST;
       }
-      _.each(this.state.additionalFeatures, ((val, ft) => { val ? cost += costMap[ft] : null}))
+      
       return cost * markup;
     }
     let markup = HARDWARE_COST_MULTIPLIER(this.state.cameraQuantity) * TAXES_SHIPPING_MULTIPLIER;
