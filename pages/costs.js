@@ -2,8 +2,8 @@
 
 export const HARDWARE_COST_MULTIPLIER = (cam_qty) => { 
 	if(cam_qty <= 100) return 3; 
-	if(cam_qty <= 500) return 2.5;  
-	else return 2;
+	if(cam_qty <= 500) return 2.75;  
+	else return 2.5;
 }
 
 export const TAXES_SHIPPING_MULTIPLIER = 1.25;
