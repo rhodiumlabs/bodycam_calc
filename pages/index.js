@@ -385,9 +385,9 @@ export default class MainPage extends Component {
               <RadioOptions
                   title={'5. How long should the data to be kept (cloud-storage)'}
                   options={[
-                      {text:"Short Period (1 month) ", value: 1}, 
-                      {text:"Medium Period (6 months)", value: 12},
-                      {text:"Long Period (24 months +)", value: 24}
+                      {text:"Short Period (6 month) ", value: 6}, 
+                      {text:"Medium Period (12 months)", value: 12},
+                      {text:"Long Period (24 months +)", value: 36}
                   ]}
                   value={this.state.retainingPeriod}
                   onChange={(retainingPeriod) => this.setState({retainingPeriod})}
