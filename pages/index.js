@@ -412,7 +412,7 @@ export default class MainPage extends Component {
               <dt>Hardware</dt>
               <dd>{this.state.cameraQuantity || 0} x Camera Cost <span className={priceStyle}>{formatter.format(totalCameraCost)}</span> </dd>
               <dd>Per Camera Cost <span className={priceStyle}>{formatter.format(cameraCost())}</span> </dd>
-              <dd>{Math.ceil(this.state.cameraQuantity/20)}xDocking Stations Cost <span className={priceStyle}>{formatter.format(dockingStationCost)}</span></dd>
+              <dd>Docking Stations Cost <span className={priceStyle}>{formatter.format(dockingStationCost)}</span></dd>
               <dd>Total Hardware Cost <span className={priceStyle}>{formatter.format(totalHardwareCost)}</span></dd>
             </dl>
             <dl>
