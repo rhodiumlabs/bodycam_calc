@@ -22,7 +22,7 @@ export const DOCKING_STATION_SIMPLE = 540;
 export const DOCKING_STATION_ADVANCED = 1600;
 
 export const PER_GIGABIT_COST = 0.006;
-export const STORAGE_MULTIPLIER = 2;
+export const STORAGE_MULTIPLIER = 3;
 export const GIGABIT_PER_HOUR = 1.125;  //Based on quality this is the most improvement we can make, 720p drops to 
 
 export const YEARLY_SERVICE_COST = (cam_qty) => {
