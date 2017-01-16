@@ -139,12 +139,14 @@ const CameraOption = (props) => {
   return (
     <dl style={{width: '100%'}}>
     <dt 
+      data-tip={'Equipped with the necessities: including picture, video and audio recording.'}
       className={styleCamBox} 
       style={{border: props.camera == MANTA_RAY ? '2px solid rgb(26, 52, 69)' : '', backgroundImage: "url('/static/MANTA_RAY.png')"}} 
       onClick={() => {props.selectCamera(MANTA_RAY); mixpanel.track("MANTA_RAY CLICKED");}}>
       Manta Ray
     </dt>
     <dt 
+      data-tip={'Customizable with all necessities plus expandable memory, GPS, and 3G.'}
       className={styleCamBox} 
       style={{border: props.camera == STING_RAY ? '2px solid rgb(26, 52, 69)' : '',backgroundImage: "url('/static/STING_RAY.png')"}} 
       onClick={() => {props.selectCamera(STING_RAY); mixpanel.track("STING_RAY CLICKED");}}>
@@ -207,8 +209,8 @@ const DockingStation = (props) => {
     <div>
       <h5 className={ssubHeader}>Docking Station</h5>
       <dl>  
-        {generateOption('Simple dock', 'Dock allows data transfer and charging. <br/> A windows PC is required to upload the video data.', OPTION_DOCKING_STATION_SIMPLE)}
-        {generateOption('Advanced dock with local storage', 'The advanced dock has local storage for <br/> automatic saving of video camera data. No extra PC required.', OPTION_DOCKING_STATION_ADVANCED)}
+        {generateOption('Simple dock', 'Supports and charges 10 cameras. Personal computer required to allow data transfer. ', OPTION_DOCKING_STATION_SIMPLE)}
+        {generateOption('Advanced dock with local storage', 'Supports and charges 20 cameras. Automatically saves and locally stores camera data.', OPTION_DOCKING_STATION_ADVANCED)}
         {generateOption('None','', OPTION_DOCKING_STATION_NONE)}
       </dl>
     </div>
@@ -393,7 +395,7 @@ export default class MainPage extends Component {
               <RadioOptions
                 title={'6. Do you require local support and training?'}
                 options={[
-                    {text:"Yes", tooltip: 'placeholder', value: 1}, 
+                    {text:"Yes", tooltip: 'Onsite team for training, maintenance and repair.', value: 1}, 
                     {text:"No", value: 0}
                 ]}
                 value={this.state.localSupport}
@@ -410,7 +412,7 @@ export default class MainPage extends Component {
               <dt>Hardware</dt>
               <dd>{this.state.cameraQuantity || 0} x Camera Cost <span className={priceStyle}>{formatter.format(totalCameraCost)}</span> </dd>
               <dd>Per Camera Cost <span className={priceStyle}>{formatter.format(cameraCost())}</span> </dd>
-              <dd>Docking Stations Cost <span className={priceStyle}>{formatter.format(dockingStationCost)}</span></dd>
+              <dd>{Math.ceil(this.state.cameraQuantity/20)}xDocking Stations Cost <span className={priceStyle}>{formatter.format(dockingStationCost)}</span></dd>
               <dd>Total Hardware Cost <span className={priceStyle}>{formatter.format(totalHardwareCost)}</span></dd>
             </dl>
             <dl>
@@ -428,7 +430,7 @@ export default class MainPage extends Component {
               <dd>Fixed Costs <span className={priceStyle}>{formatter.format(totalHardwareCost)}</span></dd>
               <dd>Recurring Costs <span className={priceStyle}>{formatter.format(recurringCosts)}/Year</span></dd>
             </dl>
-            <a className="button" href="mailto:hello@rhodium.io" style={{backgroundColor: 'rgb(26, 52, 69)'}}> Inquire more </a>
+            <a className="button" href="mailto:hello@rhodium.io" style={{backgroundColor: 'rgb(26, 52, 69)', borderColor:'#C4D4E0'}}> Inquire more </a>
             <small style={{marginBottom: '10px', background: '#EEE', fontSize: '10px', padding: '5px', display: 'block'}}>These prices are subject to change based on further specified requirements</small>
             </div>
           </div>
