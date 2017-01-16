@@ -139,7 +139,7 @@ const CameraOption = (props) => {
   return (
     <dl style={{width: '100%'}}>
     <dt 
-      data-tip={'Equipped with the necessities: including picture, video and audio recording.'}
+      data-tip={'Equipped with the necessities: including picture, video, and audio recording.'}
       className={styleCamBox} 
       style={{border: props.camera == MANTA_RAY ? '2px solid rgb(26, 52, 69)' : '', backgroundImage: "url('/static/MANTA_RAY.png')"}} 
       onClick={() => {props.selectCamera(MANTA_RAY); mixpanel.track("MANTA_RAY CLICKED");}}>
@@ -310,8 +310,8 @@ export default class MainPage extends Component {
           <div className="column">
             <p style={{fontSize: '12px'}}>
               Welcome to rhodium's bodycam calculator. 
-              Below please choose your options in hardware, 
-              software and storage to see an estimated total
+              Please choose your options in hardware, 
+              software, and storage to see an estimated total
             </p>
           </div>
           <div className="column"/>
