@@ -385,7 +385,7 @@ export default class MainPage extends Component {
               <RadioOptions
                   title={'5. How long should the data to be kept (cloud-storage)'}
                   options={[
-                      {text:"Short Period (6 month) ", value: 6}, 
+                      {text:"Short Period (6 months) ", value: 6}, 
                       {text:"Medium Period (12 months)", value: 12},
                       {text:"Long Period (24 months +)", value: 36}
                   ]}
