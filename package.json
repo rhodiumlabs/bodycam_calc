@@ -17,6 +17,9 @@
     "formsy-react": "^0.19.0",
     "lodash": "^4.17.4",
     "material-ui": "^0.16.6",
-    "next": "^1.2.3"
+    "mixpanel-browser": "^2.9.17",
+    "next": "^1.2.3",
+    "react-mixpanel": "0.0.8",
+    "react-tooltip": "^3.2.2"
   }
 }
