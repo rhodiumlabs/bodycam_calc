@@ -102,9 +102,11 @@ export const priceStyle = style({
 export const receipt = style({
   border: '1px dotted rgb(26, 52, 69)',
   padding: '1.5em',
-  position: 'fixed',
-  top: '4%',
-  right: '4%',
+  '@media (min-width: 800px)': {
+    position: 'fixed',
+    top: '4%',
+    right: '4%',
+  },
   '& dd': {
     fontSize: '12px'
   },
