@@ -320,7 +320,7 @@ export default class MainPage extends Component {
         </div>
         
         <div className="row">
-          <div className="column">
+          <div className="column-50">
             <div className="row">
               <h5 className={headerUnder}>Hardware Options</h5>
             </div>
@@ -404,7 +404,8 @@ export default class MainPage extends Component {
                 onChange={(localSupport) => this.setState({localSupport})}
               />
           </div>
-          <div className="column" ref={(receipt) => this.receipt = receipt}>
+          <div className="column-50" ref={(
+) => this.receipt = receipt}>
             {this.state.camera == '' ? <pre> Choose a camera </pre> : null}
             <div className={receipt}>
             {this.state.init ? 
