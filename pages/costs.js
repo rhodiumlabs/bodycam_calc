@@ -26,5 +26,5 @@ export const STORAGE_MULTIPLIER = 3;
 export const GIGABIT_PER_HOUR = 1.125;  //Based on quality this is the most improvement we can make, 720p drops to 
 
 export const YEARLY_SERVICE_COST = (cam_qty) => {
-	return Math.ceil(cam_qty / 100) * 2000;
+	return Math.ceil(cam_qty / 100) * 20000;
 }
